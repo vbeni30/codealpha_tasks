@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Age Calculator - Modern Design</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="glass-card">
+            <div class="header">
+                <div class="icon">
+                    <span>🎂</span>
+                </div>
+                <h1>Age Calculator</h1>
+                <p class="subtitle">"Calculate your age with precision"</p>
+            </div>
+
+            <div class="input-section">
+                <h2>Enter Your Date of Birth</h2>
+                <div class="input-grid">
+                    <div class="input-group">
+                        <label for="day">Day</label>
+                        <input type="number" id="day" placeholder="DD" min="1" max="31">
+                    </div>
+                    <div class="input-group">
+                        <label for="month">Month</label>
+                        <input type="number" id="month" placeholder="MM" min="1" max="12">
+                    </div>
+                    <div class="input-group">
+                        <label for="year">Year</label>
+                        <input type="number" id="year" placeholder="YYYY" min="1900" max="2025">
+                    </div>
+                </div>
+                <div class="error-message" id="errorMessage"></div>
+                <button class="calculate-btn" onclick="calculateAge()">
+                    <span>Calculate Age</span>
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                        <path d="M7.5 15L12.5 10L7.5 5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </button>
+            </div>
+
+            <div class="result-section" id="resultSection">
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <div class="stat-number" id="years">0</div>
+                        <div class="stat-label">Years</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number" id="months">0</div>
+                        <div class="stat-label">Months</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number" id="days">0</div>
+                        <div class="stat-label">Days</div>
+                    </div>
+                </div>
+
+                <div class="extra-info">
+                    <div class="info-item">
+                        <span class="info-icon">📅</span>
+                        <div>
+                            <div class="info-label">Total Days</div>
+                            <div class="info-value" id="totalDays">0</div>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <span class="info-icon">⏰</span>
+                        <div>
+                            <div class="info-label">Total Hours</div>
+                            <div class="info-value" id="totalHours">0</div>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <span class="info-icon">🎈</span>
+                        <div>
+                            <div class="info-label">Next Birthday</div>
+                            <div class="info-value" id="nextBirthday">-</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
